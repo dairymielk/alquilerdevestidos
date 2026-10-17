@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alquiler de Vestidos</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- animated global gradient (transparent, no dark circle) -->
+  <div id="globalGradient" class="global-gradient" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Vestidas logo" class="logo-img" />
+        <div class="brand">
+          <strong class="brand-name">Alquiler de Vestidos</strong>
+          <span class="brand-tag">Gowns • Dresses • Frocks</span>
+        </div>
+      </div>
+
+      <nav class="nav nav-center" aria-label="Main navigation">
+        <button class="nav-btn ripple" data-target="hero">Home</button>
+        <button class="nav-btn ripple" data-target="about">About</button>
+        <button class="nav-btn ripple" data-target="owners">Owners</button>
+        <button class="nav-btn ripple" data-target="products">Products</button>
+        <button class="nav-btn ripple" data-target="contact">Contact</button>
+      </nav>
+
+      <div class="header-right">
+        <button class="btn small ghost ripple" id="themeToggle">Tone</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="loginSection" class="panel">
+
+  <div class="panel-inner">
+
+    <div class="card">
+
+      <h2>Login Required</h2>
+
+      <div class="field">
+        <input type="text" id="username" placeholder=" ">
+        <label for="username">Username</label>
+      </div>
+
+      <div class="field">
+        <input type="password" id="password" placeholder=" ">
+        <label for="password">Password</label>
+      </div>
+
+      <button id="loginBtn" class="btn primary">
+        Login
+      </button>
+
+      <button id="logoutBtn" class="btn outline">
+        Logout
+      </button>
+
+      <p id="loginStatus"></p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<button id="resetData" class="btn outline">
+    Reset All Data
+</button>
+
+    <!-- HERO -->
+    <section id="hero" class="panel panel-hero" data-gradient="ember" data-anim="fade">
+      <div class="panel-inner hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">Alquiler de Vestidos — Renting Boutique</h1>
+          <p class="hero-lead">The haven of poise, grace, and beauty. Elegance and craft meet.</p>
+          <div class="hero-actions">
+            <button class="btn primary ripple" data-scroll="#products">See Products</button>
+            <button class="btn outline ripple" data-scroll="#about">Learn More</button>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="art-frame">
+            <img src="images/logo.png" alt="Decorative art" />
+            <div class="art-badge">New</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- visible animated shapes (transparent fills, warm tones) -->
+      <div class="section-anim section-anim-hero" aria-hidden="true">
+        <svg class="hero-blobs" viewBox="0 0 900 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><filter id="bblur"><feGaussianBlur stdDeviation="36" /></filter></defs>
+          <g filter="url(#bblur)" opacity="0.95">
+            <ellipse class="blob blob-a" cx="120" cy="160" rx="260" ry="140" fill="rgba(107,31,31,0.12)"></ellipse>
+            <ellipse class="blob blob-b" cx="720" cy="80" rx="200" ry="110" fill="rgba(212,160,23,0.10)"></ellipse>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="panel panel-about" data-gradient="linen" data-anim="slide-left">
+      <div class="panel-inner about-grid">
+        <div class="card glass about-card">
+          <h2>Our Story</h2>
+          <p>The owner purchased two beautiful gowns for her own debut and her sister’s upcoming celebration. She felt it would be such a waste to simply sell them afterward, so she decided to offer them for rental instead — so these stunning gowns would never be forgotten. And now, the collection has grown with four more gowns added, helping the business earn faster and recover the investment used to buy them.</p>
+          <ul class="bullets">
+            <li><strong>Founded</strong> 2026</li>
+            <li><strong>Mission</strong> Craft, care, and low-waste production</li>
+            <li><strong>Local</strong> makers and fair trade</li>
+          </ul>
+        </div>
+
+        <div class="card glass about-media">
+          <h2>Background</h2>
+          <p>Alquiler de Vestidos: we craft intricate home textiles and gowns with colorful palettes and honest materials. Each piece is made to age beautifully.</p>
+          <div class="small-gallery">
+            <img src="images/bg1.png" alt="Studio 1" />
+            <img src="images/bg2.png" alt="Studio 2" />
+            <img src="images/bg3.png" alt="Studio 3" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section-anim section-anim-about" aria-hidden="true">
+        <div class="floating-tiles">
+          <div class="tile t1"></div>
+          <div class="tile t2"></div>
+          <div class="tile t3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OWNERS -->
+    <section id="owners" class="panel panel-owners" data-gradient="ember-deep" data-anim="slide-right">
+      <div class="panel-inner owners-wrap">
+        <h2 class="section-title">Owners</h2>
+        <div class="owners-grid">
+          <figure class="owner-card reveal-card">
+            <div class="owner-photo">
+              <img src="images/tao3.png" alt="Alexis Sadicon" />
+            </div>
+            <figcaption>
+              <strong>Alexis Sadicon</strong>
+              <span>Founder & Creative Director</span>
+              <p>Design lead, product vision, and community partnerships.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="owner-card reveal-card">
+            <div class="owner-photo">
+              <img src="images/tao4.png" alt="Rowena Lasac" />
+            </div>
+            <figcaption>
+              <strong>Rowena Lasac</strong>
+              <span>Operations & Sustainability</span>
+              <p>Production, supply chain, and sustainable sourcing.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="owner-card reveal-card">
+            <div class="owner-photo">
+              <img src="images/tao2.png" alt="Rene Batterbonia" />
+            </div>
+            <figcaption>
+              <strong>Jenny Tome</strong>
+              <span>Marketing Director</span>
+              <p>Advertising and promotion, brand management, and sales enablement.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="owner-card reveal-card">
+            <div class="owner-photo">
+              <img src="images/tao1.png" alt="Pwede Mangarap" />
+            </div>
+            <figcaption>
+              <strong>Justine Candor</strong>
+              <span>Customer Service</span>
+              <p>Collecting feedbacks, customer satisfaction, and providing support.</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+
+      <div class="section-anim section-anim-owners" aria-hidden="true">
+        <svg class="owners-lines" viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true">
+          <path class="line l1" d="M0,120 C200,40 400,200 800,80" stroke="rgba(212,160,23,0.12)" fill="none" />
+          <path class="line l2" d="M0,160 C220,80 420,20 800,120" stroke="rgba(107,31,31,0.08)" fill="none" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="panel panel-products" data-gradient="gold" data-anim="fade">
+      <div class="panel-inner">
+        <div class="products-header">
+          <h2>Products</h2>
+          <p class="muted">Click any product to view details and description.</p>
+        </div>
+
+        <div class="products-grid large">
+          <article class="product" data-id="p1" tabindex="0">
+            <div class="product-media">
+              <img src="images/gown1.png" alt="images/gown1.png" />
+              <div class="badge">Handwoven</div>
+            </div>
+            <div class="product-body">
+              <h3>Noir Fleur Gala Gown</h3>
+              <p class="price">₱1,250</p>
+              <p class="short">Soft organic cotton fabric with natural dyes with handsewn rose embroderies.</p>
+            </div>
+          </article>
+
+          <article class="product" data-id="p2" tabindex="0">
+            <div class="product-media">
+              <img src="images/gown2.png" alt="Gown2" />
+              <div class="badge">Eco-fill</div>
+            </div>
+            <div class="product-body">
+              <h3>Aurelia Teal Ball Gown</h3>
+              <p class="price">₱1,500</p>
+              <p class="short">Pink and beige floral appliqués; hand-sewn beadwork; golden embroidered motifs on skirt.</p>
+            </div>
+          </article>
+
+          <article class="product" data-id="p3" tabindex="0">
+            <div class="product-media">
+              <img src="images/gown3.png" alt="Gown3" />
+              <div class="badge">Limited</div>
+            </div>
+            <div class="product-body">
+              <h3>Rosé Aureate Ball Gown</h3>
+              <p class="price">₱1,500</p>
+              <p class="short">A couture pink ball gown with hand‑stitched floral appliqués, gold embroidered accents, and dreamy tulle sleeves.</p>
+            </div>
+          </article>
+
+            <article class="product" data-id="p4" tabindex="0">
+            <div class="product-media">
+              <img src="images/gown4.png" alt="Gown4" />
+              <div class="badge">Limited</div>
+            </div>
+            <div class="product-body">
+              <h3>Lavender Lumen Gown</h3>
+              <p class="price">₱1,800</p>
+              <p class="short">A lavender evening gown with hand‑stitched lace appliqués, bead embellishments, and a tulle skirt with a train.</p>
+            </div>
+          </article>
+
+            <article class="product" data-id="p5" tabindex="0">
+            <div class="product-media">
+              <img src="images/gown5.png" alt="Gown5" />
+              <div class="badge">Limited</div>
+            </div>
+            <div class="product-body">
+              <h3>Champagne Reverie Gown</h3>
+              <p class="price">₱1,500</p>
+              <p class="short">A champagne‑tone evening dress with a lace and beaded sweetheart bodice, thin straps, and tulle skirt for grace.</p>
+            </div>
+          </article>
+
+            <article class="product" data-id="p6" tabindex="0">
+            <div class="product-media">
+              <img src="images/gown6.png" alt="gown6" />
+              <div class="badge">Limited</div>
+            </div>
+            <div class="product-body">
+              <h3>Lace Reverie Mini Gown</h3>
+              <p class="price">₱1,200</p>
+              <p class="short">A strapless sweetheart mini with boned bodice, intricate lace embroidery, and a flared tulle skirt.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="section-anim section-anim-products" aria-hidden="true">
+        <canvas id="productsParticles" class="products-particles" aria-hidden="true"></canvas>
+      </div>
+    </section>
+
+    <!-- PRODUCT DETAIL OVERLAY -->
+    <div id="productDetail" class="overlay" aria-hidden="true">
+      <div class="overlay-card">
+        <button class="overlay-close" id="closeDetail" aria-label="Close">✕</button>
+        <div class="overlay-body">
+          <img id="detailImg" src="" alt="" />
+          <div class="detail-text">
+            <h3 id="detailTitle"></h3>
+            <p id="detailDesc"></p>
+            <p class="detail-price" id="detailPrice"></p>
+            <p id="detailStock"></p>
+            <div class="detail-actions">
+              <button class="btn primary ripple" id="buyNow">Rent now</button>
+              <button class="btn outline ripple" id="shareProduct">Share</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RENT FORM OVERLAY -->
+<div id="rentOverlay" class="overlay" aria-hidden="true">
+<div class="overlay-card rent-card">
+<button class="overlay-close" id="closeRent">✕</button>
+ 
+<h2>Rental Information</h2>
+ 
+<form id="rentForm">
+ 
+<div class="field">
+<input
+  type="number"
+  id="rentQty"
+  min="1"
+  max="10"
+  value="1"
+  required
+  placeholder=" "
+/>
+<label for="rentQty">How many will you rent?</label>
+</div>
+ 
+<div class="field">
+<input type="text" id="customerName" required placeholder=" ">
+<label for="customerName">Full Name</label>
+</div>
+ 
+<div class="field">
+<input type="text" id="customerAddress" required placeholder=" ">
+<label for="customerAddress">Address</label>
+</div>
+ 
+<div class="field">
+<input type="tel" id="customerNumber" required placeholder=" ">
+<label for="customerNumber">Contact Number</label>
+</div>
+ 
+<div class="field">
+<select id="paymentMethod" required>
+<option value="">Select Payment</option>
+<option>Cash</option>
+<option>GCash</option>
+<option>Maya</option>
+<option>Bank Transfer</option>
+</select>
+</div>
+
+<div
+    class="field"
+    id="accountField"
+    style="display:none;"
+>
+
+  <input
+      type="text"
+      id="accountNumber"
+      placeholder=" "
+  >
+
+  <label for="accountNumber">
+      Account Number
+  </label>
+
+</div>
+
+<div class="field">
+
+  <input
+      type="text"
+      id="totalAmount"
+      value="₱0"
+      readonly
+  >
+
+  <label for="totalAmount">
+      Total Amount
+  </label>
+
+</div>
+
+ 
+<button type="submit" class="btn primary">
+Confirm Rental
+</button>
+ 
+<p id="rentStatus"></p>
+ 
+</form>
+</div>
+</div>
+
+<section id="history" class="panel">
+
+    <div class="panel-inner">
+
+        <h2>Rental History</h2>
+
+        <div id="historyContainer">
+
+            No rentals yet.
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel panel-contact" data-gradient="linen" data-anim="slide-up">
+      <div class="panel-inner content-grid">
+        <div class="card glass contact-card">
+          <h2>Contact Us</h2>
+          <p class="muted">Send a message — we reply within 48 hours.</p>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="field">
+              <input id="name" name="name" type="text" required placeholder=" " />
+              <label for="name">Your name</label>
+            </div>
+
+            <div class="field">
+              <input id="email" name="email" type="email" required placeholder=" " />
+              <label for="email">Your email</label>
+            </div>
+
+            <div class="field">
+              <input id="subject" name="subject" type="text" required placeholder=" " />
+              <label for="subject">Subject</label>
+            </div>
+
+            <div class="field">
+              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+              <label for="message">Message</label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary ripple">Send</button>
+              <button type="button" class="btn outline ripple" id="mailtoFallback">Open Mail App</button>
+            </div>
+
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="card glass contact-side">
+          <h3>Visit</h3>
+          <p class="muted">Pag-asa, Bansud, Oriental Mindoro, Philippines</p>
+
+          <h3>Hours</h3>
+          <p class="muted">Mon–Fri 9:00–17:00</p>
+
+          <h3>Follow</h3>
+          <p class="muted">Instagram (alquiler_botique) • Facebook (Alquiler de Vestidos)  • Twitter (alquiler_vestidos2026)  • Contact No. (09678652852)</p>
+        </aside>
+      </div>
+
+      <div class="section-anim section-anim-contact" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© Alquiler de Vestidos • Renting Boutique</p>
+    </div>
+  </footer>
+
+  <div id="sectionSwitchOverlay" class="switch-overlay" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
