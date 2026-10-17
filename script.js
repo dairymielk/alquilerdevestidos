@@ -545,34 +545,27 @@ paymentMethod.addEventListener(
 
 function displayHistory() {
 
-    const container =
-    document.getElementById("historyContainer");
+    const container = document.getElementById("historyContainer");
 
     if (!container) return;
 
-    const user =
-    localStorage.getItem("currentUser");
+    const user = localStorage.getItem("currentUser");
 
     if (!user) {
 
-        container.innerHTML =
-        "Please login first.";
+        container.innerHTML = "Please login first.";
 
         return;
 
     }
 
-    const history =
-    JSON.parse(
-        localStorage.getItem(
-            user + "_history"
-        )
+    const history = JSON.parse(
+        localStorage.getItem(user + "_history")
     ) || [];
 
     if (history.length === 0) {
 
-        container.innerHTML =
-        "No rentals yet.";
+        container.innerHTML = "No rentals yet.";
 
         return;
 
@@ -582,8 +575,7 @@ function displayHistory() {
 
     history.forEach(item => {
 
-        const card =
-        document.createElement("div");
+        const card = document.createElement("div");
 
         card.className = "card";
 
@@ -632,6 +624,8 @@ loginBtn.addEventListener('click', () => {
 
     loginStatus.textContent =
     'Logged in as ' + username;
+
+    displayHistory();
 
 });
 
