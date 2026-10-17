@@ -450,16 +450,16 @@ stock
 );
 
     rentStatus.innerHTML = `
-        ✅ Rental Confirmed!<br><br>
+        ✅ Rental Confirmed!
 
-        Product: ${selectedProduct}<br>
-        Quantity: ${qty}<br>
-        Total Amount: ₱${total.toLocaleString()}<br>
-        Name: ${name}<br>
-        Address: ${address}<br>
-        Contact Number: ${number}<br>
-        Payment Method: ${payment}<br>
-        ${account ? 'Account Number: ' + account + '<br>' : ''}
+        Product: ${selectedProduct}
+        Quantity: ${qty}
+        Total Amount: ₱${total.toLocaleString()}
+        Name: ${name}
+        Address: ${address}
+        Contact Number: ${number}
+        Payment Method: ${payment}
+        ${account ? 'Account Number: ' + account + '' : ''}
     `;
 
     const rental = {
