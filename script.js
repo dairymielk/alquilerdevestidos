@@ -543,75 +543,68 @@ paymentMethod.addEventListener(
 
 });
 
-function displayHistory(){
+function displayHistory() {
 
     const container =
-    document.getElementById(
-    'historyContainer'
-    );
+    document.getElementById("historyContainer");
 
-    if(!container) return;
+    if (!container) return;
 
-    const history =
+    const user =
+    localStorage.getItem("currentUser");
 
-    JSON.parse(
-    localStorage.getItem(
-    'rentHistory'
-    )
-    ) || [];
-
-    if(history.length === 0){
+    if (!user) {
 
         container.innerHTML =
-        'No rentals yet.';
+        "Please login first.";
 
         return;
+
     }
 
-    container.innerHTML = '';
+    const history =
+    JSON.parse(
+        localStorage.getItem(
+            user + "_history"
+        )
+    ) || [];
+
+    if (history.length === 0) {
+
+        container.innerHTML =
+        "No rentals yet.";
+
+        return;
+
+    }
+
+    container.innerHTML = "";
 
     history.forEach(item => {
 
-        container.innerHTML += `
+        const card =
+        document.createElement("div");
 
-        <div class="card">
+        card.className = "card";
 
+        card.innerHTML = `
             <h3>${item.product}</h3>
-
-            <p>
-                Quantity:
-                ${item.quantity}
-            </p>
-
-            <p>
-                Total:
-                ₱${item.total}
-            </p>
-
-            <p>
-                Customer:
-                ${item.customer}
-            </p>
-
-            <p>
-                Payment:
-                ${item.payment}
-            </p>
-
-            <p>
-                Date:
-                ${item.date}
-            </p>
-
-        </div>
-
+            <p><strong>Quantity:</strong> ${item.quantity}</p>
+            <p><strong>Total:</strong> ₱${item.total}</p>
+            <p><strong>Customer:</strong> ${item.customer}</p>
+            <p><strong>Payment:</strong> ${item.payment}</p>
+            <p><strong>Date:</strong> ${item.date}</p>
         `;
+
+        container.appendChild(card);
 
     });
 
 }
 
-displayHistory();
+window.addEventListener("load", () => {
+    displayHistory();
+});
 
 loginBtn.addEventListener('click', () => {
 
